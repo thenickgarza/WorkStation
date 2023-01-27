@@ -1,0 +1,10 @@
+<%= form_with model: [@user, @comment] do |form| %>
+  <div class="trix-content">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+   <div class="form-group">
+    <%= form.label :content %>
+    <%= form.rich_text_area :content, class: 'form-control' %>
+  </div>
+<% end %>
