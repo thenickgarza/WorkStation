@@ -1,10 +1,10 @@
-<div class="container text-center mt-5">
-<h1><u>Sign Up</u></h1>
+<div class="container  text-center mt-5">
+<h1 class="text-medium"><u>Sign Up</u></h1>
   <%= form_with model: @user do |form| %>
   <div class="card">
-    <div class="card-body">
+    <div class="card-body ">
       <div class="mb-3">
-        <%= form.label :first_name %><br>
+        <%= form.label :first_name  %><br>
         <%= form.text_field :first_name %>
         <% @user.errors.full_messages_for(:name).each do |message| %>
         <div><%= message %></div>
@@ -12,28 +12,28 @@
       </div>
       <div class="mb-3">
         <%= form.label :last_name %><br>
-        <%= form.text_field :last_name %>
+        <%= form.text_field :last_name, :class => 'text-medium'%>
         <% @user.errors.full_messages_for(:name).each do |message| %>
         <div><%= message %></div>
         <% end %>
       </div>
       <div class="mb-3">
         <%= form.label :email %><br>
-        <%= form.text_field :email %><br>
+        <%= form.text_field :email, :class => 'text-medium' %><br>
         <% @user.errors.full_messages_for(:email).each do |message| %>
         <div><%= message %></div>
         <% end %>
       </div>
       <div class="mb-3">
         <%= form.label :password_confirmation %><br>
-        <%= form.text_field :password_confirmation %><br>
+        <%= form.text_field :password_confirmation, :class => 'text-medium' %><br>
         <% @user.errors.full_messages_for(:password_confirmation).each do |message| %>
         <div><%= message %></div>
         <% end %>
       </div>
       <div class="mb-3">
         <%= form.label :password %><br>
-        <%= form.text_field :password %><br>
+        <%= form.text_field :password, :class => 'text-medium' %><br>
         <% @user.errors.full_messages_for(:password).each do |message| %>
         <div><%= message %></div>
         <% end %>
