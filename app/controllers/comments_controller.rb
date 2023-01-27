@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+    before_action :set_user
+
     def index
        
         @comment = Comment.all
@@ -7,14 +9,14 @@ class CommentsController < ApplicationController
     end
 
     def new
-       
+
         @comment = Comment.new
     
     end
 
     def create
-        
-        @comment = Comment.create(comment_params)
+
+        @comment = current_user.comments.new(comment_params)
             respond_to do |format|
                 if @comment.save
                     format.html { redirect_to root_path, notice: "Comment was successfully created. "}
@@ -27,7 +29,7 @@ class CommentsController < ApplicationController
      end
 
     def show
-
+        @comment = Comment.find(params[:id])
     end
 
     def edit
@@ -44,9 +46,11 @@ class CommentsController < ApplicationController
 
     private 
 
+
+
     def comment_params
         
-        params.require(:user).permit(:title, :content)
+        params.require(:comment).permit(:title, :content, :user_id)
     
     end
 
