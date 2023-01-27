@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+ body { 
+    background-color: #121212;
+ }
+
+.text-medium {
+    color: #FFFFFF;
+    opacity: 60%;
+ }
+
+ .text-high {
+    color: #FFFFFF;
+    opacity: 87%;
+ }
+
+.background-color {
+    background-color: #161b22;
+}
+
+.card {
+    border: none;
+}
+
+.form-colors{
+    background-color: #FFFFFF;
+    color: black; 
+    opacity: 87%;
+}
