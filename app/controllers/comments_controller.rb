@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
 
-    before_action :set_user
 
     def index
        
@@ -15,7 +14,6 @@ class CommentsController < ApplicationController
     end
 
     def create
-
         @comment = current_user.comments.new(comment_params)
             respond_to do |format|
                 if @comment.save
