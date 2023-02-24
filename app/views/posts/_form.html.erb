@@ -12,13 +12,13 @@
   <% end %>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
   <div>
-    <%= form.label :comment_id, style: "display: block" %>
-    <%= form.text_field :comment_id %>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.rich_text_area :content, class: 'form-control' %>
   </div>
 
   <div>
